@@ -1,0 +1,115 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Widget.Dialog.Button" parent="android:Widget.Holo.Light.Button">
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="Widget.View.Button" parent="android:Widget.Holo.Light.Button">
+        <item name="android:enabled">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="Widget.View.LabelTextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="Widget.View.TitleTextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:background">@color/title_bar_color</item>
+        <item name="android:paddingStart" tools:targetApi="17">5dp</item>
+        <item name="android:paddingEnd" tools:targetApi="17">5dp</item>
+        <item name="android:textColor">@color/title_bar_text_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="Widget.View.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textColor">@color/value_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="Widget.View.ValueTextView" parent="android:Widget.Holo.Light.Spinner">
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="Widget.View.SelectMaskTextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="Widget.View.MessageTextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="vertical_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="vertical_split">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="vertical_split_5dp" parent="vertical_split">
+        <item name="android:layout_height">5dp</item>
+    </style>
+    <style name="vertical_layout" parent="vertical_view">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="horizontal_split">
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="horizontal_split_5dp" parent="horizontal_split">
+        <item name="android:layout_width">5dp</item>
+    </style>
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorControlActivated">@color/colorActivated</item>
+        <!--<item name="android:background">@color/white</item>-->
+    </style>
+    <style name="dialog_caption_textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <!--<item name="android:textColor">@color/caption_color</item>-->
+        <item name="android:textColor">@drawable/option_caption_text_selector</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:enabled">true</item>
+    </style>
+    <style name="dialog_option_caption_vertical_textview" parent="dialog_caption_textview">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="base_dialog_value_textview" parent="android:Widget.Holo.Light.Spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@drawable/option_value_text_selector</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:enabled">true</item>
+    </style>
+    <style name="dialog_option_value_vertical_textview" parent="base_dialog_value_textview">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    
+</resources>

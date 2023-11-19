@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--	Public
+1.11.2015091502 : atid.dev.rfid 1.11.2015091500 적용
+                  ListView 쓰래드 예외 버그 처리
+                  장비 초기화 WaitDialog에 Cancelable 가능 추가
+                  장비 초기화 실패 시 메시지박스 출력 후 종료
+1.12.2015091700 : Gun 트리거 파워 GPIO추가된 atid.system.ctrl 적용
+1.13.2015092300 : serial port lock 사용버전 atid.system.comm 적용
+1.14.2015100100 : atid.system.ctrl v1.11.2015100100
+1.14.2015110500 : inventory화면에서 pc 체크를 없앤 후, 화면을 닫고 다시 inventory로 되돌아 왔을 때,
+				  pc체크가 없는데도 pc 값이 표시 되는 문제 수정.
+1.15.2015111100 : 로그 출력 방식 변경 [Log => ATLog], Freq Channel 초기화 Freq 관련 메서드 최초 1회 호출 시 실시하도록 수정
+1.15.2015111200 : 로그 출력 덤프 제거, Flash 위치를 Close이전에 하도록 수정
+1.15.2015111201 : 기본 로그를 안남기도록 수정
+1.15.2015111400 : RFID Module Check시 전원 끄고 나오도록 수정
+1.16.2015112000 : XC1003 모델명도 인식하도록 수정
+1.17.2016022400 : Selection Mask 문제 수정.
+				  Inventory에서 패킷 추가 수신시 자동 종료 추가
+1.18.2016041800 : atid.system.ctrl v1.14.2016041800적용
+1.18.2016061400 : KeyboardWedge실행 후 UHF Demo를 실행하면 sleep , WakeUp Count가 감소하는 증상이 발생하여 mReader = null 추가
+1.19.2016083000 : Total Tag Count 시 일정 시간 Tag count 증가 되지 않는 오류 수정
+1.20.2016091300 : Option Frequency Table 소수점 1자리 에서 3자리 까지 표시
+1.20.2016090200_K01 : atid.lib.jcomm Bug Fix  적용.
+1.20.2016092200 : Single Mode Inventory 버그 수정
+1.21.2016092300 : Password 설정 안되는 버그 수정
+1.21.2016092700 : Freq Table 소수점3자리 미적용 된부분 3자리로 출력되도록 수정
+1.22.2016112300 : 1. atid.dev.rfid : 2.23.2016112300 적용.
+				  2. atid.system.jcomm : 1.17.2016112300 적용.
+				  3. Link Profile 기능 추가.
+				  4. Inventory 시 Tag per second 표시 추가.
+1.22.2016112500 : 1. atid.dev.rfid : 2.23.2016112500 적용.
+				  2. atid.system.jcomm : 1.17.2016112500 적용.
+1.22.2016112900 : MA 모듈 임시 적용.(멕시코 개발 용)
+1.23.2016120800 : atid.dev.rfid 2.22.2016120700 적용 (AMS 모듈 적용)
+1.23.2016120900 : 1초 이내에 키를 다시 누르면, 키 이벤트를 무시하도록 수정.
+1.23.2016121300 : atid.dev.rfid v2.24.2016121300 적용
+1.23.2016121500 : App이 foreground 상태 일때만 WakeLock 적용하도록 수정.
+1.23.2017010500 : 초기 실행시 rfid 객체 초기화할때 WaitDialog를 띄울 때, OnCancelListener를 설정하지 않도록 수정.
+                  OnCancelListener를 설정하게 되면 APp이 열릴때 화면을 터치하면 cancel 되어 종료 됨.
+                  AT870A SideKey(F7, F8) 적용
+1.23.2017010900 : atid.dev.rfid v2.24.2017010600 적용
+1.24.2017011200 : atid.dev.rfid v2.24.2017011200 적용
+1.24.2017011800 : atid.dev.rfid v2.25.2017011800 적용.
+1.25.2017021700 : atid.dev.rfid v2.26.2017021700 적용.
+				  Option 화면에 Inventory Option 추가.(Target, Session, Q)
+1.26.2017091901 : atid.dev.rfid v2.27.2017091900 적용.
+1.27.2019111300 : atid.dev.rfid v2.28.2019111300 적용 (arm64-v8a)
+2.00.2020042100 : XC2910 적용후, 정식배포
+2.00.2020050400 : atid.dev.rfid v2.29.2020050400 적용.
+2.00.2020061600 : inventory 화면에 cw on 기능 추가.
+                  atid.dev.rfid v2.29.2020061600 적용.
+2.02.2022042600.beta: atid.dev.rfid v2.32.2022042200 적용: power lever min 10dBm -> 0dBm
+2.2.2022062000  : atid.dev.rfid v2.33.2022062000, atid.system.jcomm v1.23.2022062000, atid.util v1.19.2022062000 적용: 6B and Rail tag inventory API added.
+ -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.atid.app.rfid">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.atid.app.rfid.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.InventoryActivity"
+            android:icon="@drawable/ic_inventory"
+            android:label="@string/inventory_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.ReadMemoryActivity"
+            android:icon="@drawable/ic_read"
+            android:label="@string/read_memory_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.WriteMemoryActivity"
+            android:icon="@drawable/ic_write"
+            android:label="@string/write_memory_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.LockMemoryActivity"
+            android:icon="@drawable/ic_lock"
+            android:label="@string/lock_memory_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.OptionActivity"
+            android:icon="@drawable/ic_option"
+            android:label="@string/option_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atid.app.rfid.view.SelectionMask6cActivity"
+            android:label="@string/mask_title"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

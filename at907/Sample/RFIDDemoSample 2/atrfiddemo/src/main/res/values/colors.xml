@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="yellow">#ffff00</color>
+	<color name="blue">#0000ff</color>
+	<color name="red">#ff0000</color>
+	<color name="black">#000000</color>
+	<color name="white">#ffffff</color>
+
+	<color name="disconnected_device">#989898</color>
+	<color name="connecting_device">#ffc000</color>
+	<color name="connected_device">#3a83e8</color>
+		
+    <color name="label_caption">#2d9bd5</color>
+	<color name="label_color">#598aa1</color>
+    <color name="value_color">#1a58af</color>
+    
+    <color name="tag_count_color">#ab6213</color>
+    
+    <color name="message_background">#a9a9a9</color>
+    <color name="title_bar_color">#283741</color>
+	<color name="title_bar_text_color">#d1d1d1</color>
+
+	<color name="split_line_color">#d2d2d2</color>
+	
+	<color name="selection_background">#1e377d</color>
+
+	<!-- colors to support export csv/txt-->
+	<color name="colorPrimary">#3F51B5</color>
+	<color name="colorPrimaryDark">#303F9F</color>
+	<color name="colorActivated">@color/deepskyblue</color>
+	<color name="colorAccent">@color/deepskyblue</color>
+	<color name="colorControlNormal">@color/lightgrey</color>
+	<color name="colorControlHighlight">@color/grey</color>
+	<color name="lightgrey">#D3D3D3</color>
+	<color name="grey">#808080</color>
+	<color name="deepskyblue">#00BFFF</color>
+	<color name="dodperblue">#1E90FF</color>
+	<color name="caption_color">@color/colorPrimary</color>
+
+	<color name="list_name_color">#205867</color>
+	<color name="list_item_color">#31859b</color>
+
+	<color name="access_title_color">#1f4e78</color>
+</resources>

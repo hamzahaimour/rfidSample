@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/frame_line_top_bottom"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+<!--    &lt;!&ndash; File Data Format &ndash;&gt;
+    <LinearLayout
+        style="@style/vertical_layout">
+
+        <TextView
+            style="@style/dialog_option_caption_vertical_textview"
+            android:text="@string/file_data_format"/>
+
+        <View style="@style/vertical_split_5dp"/>
+
+        <TextView android:id="@+id/file_data_format"
+            style="@style/dialog_option_value_vertical_textview"/>
+
+    </LinearLayout>-->
+
+    <!-- File Data Separator Type -->
+    <LinearLayout
+        style="@style/vertical_layout">
+
+        <TextView
+            style="@style/dialog_option_caption_vertical_textview"
+            android:text="@string/file_data_separator_type"/>
+
+        <View style="@style/vertical_split_5dp"/>
+
+        <TextView android:id="@+id/file_data_separator_type"
+            style="@style/dialog_option_value_vertical_textview"/>
+
+        <!--<View style="@style/vertical_split_1dp" android:background="@color/lightgrey"/>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

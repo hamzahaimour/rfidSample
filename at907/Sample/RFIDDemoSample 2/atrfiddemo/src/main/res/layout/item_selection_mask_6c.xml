@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.atid.app.rfid.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:atid="http://schemas.adnroid.com/apk/res/com.aitd.app.rfid.checkable"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    atid:checkable="@+id/radio" 
+    tools:ignore = "NamespaceTypo">
+
+    <RadioButton
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <View android:layout_width="3dp" android:layout_height="0dp"/>
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/target"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="3dp" />
+
+            <TextView
+                android:id="@+id/action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="3dp" />
+
+            <TextView
+                android:id="@+id/offset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="3dp" />
+
+            <TextView
+                android:id="@+id/length"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mask"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</com.atid.app.rfid.widgets.CheckableLinearLayout>

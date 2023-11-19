@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">ATID RFID Demo</string>
+    <string name="inventory_title">Inventory</string>
+    <string name="inventory_ex_title">Inventory(Single)</string>
+    <string name="read_memory_title">Read Memory</string>
+    <string name="write_memory_title">Write Memory</string>
+    <string name="lock_memory_title">Lock Memory</string>
+    <string name="option_title">Option</string>
+    <string name="mask_title">Selection Mask</string>
+    
+    <!-- Main Activity -->
+    <string name="demo_version">Demo Version</string>
+    <string name="firmware_version">Firmware Version</string>
+    <string name="menu_inventory">Inventory</string>
+    <string name="menu_inventoryEx">Inventory(Single)</string>
+    <string name="menu_read">Read Memory</string>
+    <string name="menu_write">Write Memory</string>
+    <string name="menu_lock">Lock Memory</string>
+    <string name="menu_option">Option</string>
+    <string name="logo">ATID Co., Ltd</string>
+
+    <!-- Dialog -->
+    <string name="module_error">Module Error</string>
+    <string name="fail_check_module">The PDA is not equipped the module, or another RFID App is running.</string>
+    <string name="connect_module">It is connected to the RFID module.\nPlease, wait.</string>
+    <string name="load_option">Loading the option values.\nPlease, wait.</string>
+    <string name="target">Target</string>
+    <string name="bit_unit">bit</string>
+    <string name="mask_item_dialog">Selection Mask Item</string>
+    
+    <!-- Common -->
+    <string name="power_gain">Power Gain</string>
+    <string name="action_inventory">Inventory</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_mask">Mask</string>
+    <string name="action_read">Read</string>
+    <string name="action_write">Write</string>
+    <string name="action_lock">Lock</string>
+    <string name="action_save">Save</string>
+    <string name="action_defaults">Defaults</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_default">Default</string>
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="not_supported">Not Supported</string>
+    
+    <!-- Inventory -->
+    <string name="inventory_type">Inventory Type</string>
+    <string name="unit_ms">ms</string>
+    <string name="display_pc">Display PC</string>
+    <string name="report_rssi">Report RSSI</string>
+    <string name="cw_on">CW On</string>
+    <string name="rssi_value">RSSI : </string>
+    <string name="continuous_mode">Continue Mode</string>
+    <string name="operation_time">Operation Time</string>
+    <string name="tag_count">Tag</string>
+    <string name="tag_tps_count">Tag per second</string>
+    <string name="tag_total_count">Total Tag</string>
+    <string name="auto_detect">Auto Detect</string>
+    <string name="auto_detect2">Auto Detect(Ex)</string>
+    <string name="singe_inventory">Singe inventory</string>
+    
+    <!-- Read Memory -->
+    <string name="read_memory_value">Read Memory Value</string>
+    <string name="read_memory_param">Read Memory Parameters</string>
+    <string name="bank">Bank</string>
+    <string name="offset">Offset</string>
+    <string name="length">Length</string>
+    <string name="password">Password</string>
+    <string name="reading_epc">Reading EPC&#8230;</string>
+	<string name="reading_tag_memory">Reading Tag Memory&#8230;</string>
+	<string name="stop_read_memory">Stop Read Memory&#8230;</string>
+	
+    <!-- Write Memory -->
+    <string name="write_memory_param">Write Memory Parameters</string>
+    <string name="write_data">Write Data</string>
+	<string name="writing_tag_memory">Writing Tag Memory&#8230;</string>
+	<string name="stop_write_memory">Stop Write Memory&#8230;</string>
+    
+    <!-- Lock Memory -->
+    <string name="lock_memory_param">Lock Memory Parameters</string>
+    <string name="locking_tag_memory">Locking Tag memory&#8230;</string>
+    <string name="stop_lock_memory">Stop Lock memory&#8230;</string>
+    <string name="kill_password">Kill Password</string>
+    <string name="access_password">Access Password</string>
+    <string name="epc">EPC</string>
+    <string name="tid">TID</string>
+    <string name="user">User</string>
+    <string name="set_password">Set Password</string>
+    <string name="set_access_password_title">Set Access Password</string>
+    
+    <!-- Options -->
+    <string name="reader_options">Reader Options</string>
+    <string name="tag_type">Tag Type</string>
+    <string name="inventory_options">Inventory Options</string>
+    <string name="global_band">Global Band</string>
+    <string name="inventory_time">Inventory Time</string>
+    <string name="idle_time">Idle Time</string>
+    <string name="operation_options">Operation Options</string>
+    <string name="freq_channel">Frequency Channel</string>
+    <string name="system_options">System Options</string>
+    <string name="region">Region</string>
+    <string name="lbt_channel">LBT</string>
+    <string name="log_level">Log Level</string>
+    <string name="admin_password">Admin Password</string>
+    <string name="timeout_time">Timeout Time</string>
+    <string name="suffix_sec">sec</string>
+    <string name="suffix_msec">ms</string>
+    <string name="save_property">Saving Now Option Properties.</string>
+    <string name="default_property">Initializing Default Properties</string>
+    <string name="link_profile">Link Profile</string>
+    <string name="inv_session">Session</string>
+    <string name="inv_target">Target</string>
+    <string name="q_start">Start Q</string>
+    <string name="q_max">Max Q</string>
+    <string name="q_min">Min Q</string>
+    <string name="q_start_description">startQ must be greater than or equal to minQ and less than or equal to maxQ.</string>
+    <string name="q_max_description">maxQ must be greater than or equal to startQ and minQ.</string>
+    <string name="q_min_description">minQ must be less than or equal to startQ and maxQ.</string>
+    
+    <!-- Selection Mask -->
+    <string name="mask">Mask</string>
+    <string name="action">Action</string>
+    <string name="selection_flag">Selection Flag</string>
+	<string name="inventory_session">Inventory Session</string>
+	<string name="session_flag">Session Flag</string>
+    <string name="use_selection_mask">Use Selection Mask</string>
+    <string name="use_flip_mode">Use Flip Mode</string>
+    <string name="add_mask_title">Add Selection Mask</string>
+    <string name="edit_mask_title">Edit Selection Mask</string>
+    <string name="remove_mask_title">Remove Selection Mask</string>
+    <string name="clear_mask_title">Clear Selection Mask</string>
+    <string name="wait_select_mask">Initializing Selection Mask.\nPlease Wait&#8230;</string>
+    <string name="remove_mask_msg">Do you want to remove the selected Selection Mask Item?</string>
+    <string name="clear_mask_msg">Do you want to remove all Selection Mask Item?</string>
+    
+    <!-- Admin Password Dialog -->
+    <string name="admin_password_dialog">Enter Admin Mode</string>
+    <string name="password_hint">Enter admin password.</string>
+    <string name="invalid_password_message">Invalid Password1!!</string>
+    
+    <!-- Frequency Channel Dialog -->
+    <string name="freq_chan_title">Freq Channel Config</string>
+    
+    <!-- LBT Channel Dialog -->
+	<string name="lbt_channel_dialog">LBT Channel</string>
+	<string name="channel0">916.8MHz</string>
+	<string name="channel1">918.0MHz</string>
+	<string name="channel2">919.2MHz</string>
+	<string name="channel3">920.3MHz</string>
+	<string name="channel4">921.0MHz</string>
+	<string name="channel5">921.6MHz</string>
+	<string name="channel6">922.2MHz</string>
+	<string name="channel7">922.8MHz</string>
+	<string name="channel8">923.4MHz</string>
+
+	<!-- Selection Mask Dialog -->
+	<string name="mask_dialog">Mask Selection</string>
+	<string name="wait_title">ATID RFID Demo</string>
+	<string name="wait_content">Initialize RFID reader&#8230;</string>
+
+    <!--export to csv/txt-->
+    <string name="file_name">File Name :</string>
+    <string name="save_file_format">Save File Format</string>
+    <string name="file_data_format">File Data Format</string>
+    <string name="file_data_separator_type">File Data Separator Type</string>
+    <string name="save_as">Save As</string>
+    <string name="msg_saving_list">Saving list to file. Please wait.</string>
+    <string name="msg_fail_saving_list">Failed to save list to file.</string>
+    <string name="msg_fail_load_battery_time">Failed to load battery interval.</string>
+
+    <string name="title_data">Data</string>
+    <string name="title_info">Information</string>
+    <string name="title_error">Error</string>
+	
+</resources>
